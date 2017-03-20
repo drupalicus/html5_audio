@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\html5_audio\Plugin\Field\FieldFormatter\Html5AudioFieldFormatter.
- */
-
 namespace Drupal\html5_audio\Plugin\Field\FieldFormatter;
 
 use Drupal\Component\Utility\Html;
@@ -30,10 +25,10 @@ class Html5AudioFieldFormatter extends FormatterBase {
    * {@inheritdoc}
    */
   public static function defaultSettings() {
-    return array(
+    return [
       // Implement default settings.
       'autoplay' => '0',
-    ) + parent::defaultSettings();
+    ] + parent::defaultSettings();
   }
 
   /**
@@ -74,8 +69,6 @@ class Html5AudioFieldFormatter extends FormatterBase {
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $elements = [];
 
-    // Render all field values as part of a single <audio> tag.
-    $sources = array();
     foreach ($items as $delta => $item) {
       // Get the mime type. This method for calling a service is **not** using
       // dependency injection.

@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains html5_audio.module..
+ * Contains html5_audio.module.
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -36,3 +36,4 @@ function html5_audio_theme() {
     ),
   );
 }
+
